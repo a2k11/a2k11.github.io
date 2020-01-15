@@ -20,8 +20,8 @@
 
 title: Adam Kaewell
 email: adam.kaewell@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My thoughts, struggles, and progress in software & life
+description: >-
+  My thoughts, struggles, and progress
 baseurl: /blog
 url: https://adam.kaewell.com
 twitter_username: akaewell
@@ -31,6 +31,14 @@ github_username:  a2k11
 theme: minima
 plugins:
   - jekyll-feed
+
+defaults:
+  - 
+    scope:
+      path: ""
+    values: 
+      layout: "post"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -51,4 +51,4 @@ The technique called "Replace the Conditional with Polymorphism" is a nice skill
 2. Iterate until a subclass exists for every different value upon which you switch
 
 
-The Liskov Substitution Principle is very similar to these ideas as it is defined as if an object of type 'elmo' extends an object of type 'muppet', then an object of type 'elmo' can always be used whereever type 'muppet' is expected.  Dynamically typed languages, like `Ruby`, rely on this trust and expect these objects to respond appropriately to their messages.  
+The Liskov Substitution Principle is very similar to these ideas as it is defined as if an object of type **raspberry** extends an object of type **fruit**, then an object of type **raspberry** can always be used whereever type **fruit** is expected.  Dynamically typed languages, like `ruby`, rely on this trust and expect these objects to respond appropriately to their messages.  

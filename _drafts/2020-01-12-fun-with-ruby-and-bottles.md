@@ -14,32 +14,7 @@ I started my career in software development learning about [ruby](https://www.ru
 
  ### Using Polymorphism
  ---
- Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  This usually involves a child class that can react in the same way as the parent class to a message.  For example, we say `Raspberry` is a child of the `Fruit` class.  
-
-
-
-{% highlight ruby %}
-class Fruit
-  def container
-    "bag"
-  end
-end
-
-class Raspberry < Fruit
-  def container
-    "box"
-  end
-
-  def color
-    "red"
-  end
-end
-{% endhighlight %}
-
-
-
-The technique called "Replace the Conditional with Polymorphism" is a nice skill to practice in your code.  It might take longer and it may create more problems in the short term to build such a solution.  The steps listed to take this approach are:
-
+ Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  This usually involves a child class that can react in the same way as the parent class to a message.  "Replace the Conditional with Polymorphism" removes unwanted conditionals by using inheritance.  The steps for using this method are listed below:
 
 1. create a subclass to stand in for the value upon which you switch
     1. copy one method that switches on the value in the subclass
@@ -49,6 +24,35 @@ The technique called "Replace the Conditional with Polymorphism" is a nice skill
     1. in the superclass, remove everything but the false branch of the conditional
     1. repeat steps a-c until all methods that switch on the value are dispersed
 2. Iterate until a subclass exists for every different value upon which you switch
+ 
+And the Liskov Substitution Principle states if let's say a type **Raspberry** extends type **Fruit**, then a **Raspberry** object type can always be used wherever a **Fruit** object type is expected.  Dynamically typed languages like `ruby`, rely on trust, expect these objects to respond appropriately to the message, and have presumptions about the message results.  
+
+So polymorphism is woven into each of these ideas in order to better organize and describe our code.  I created a simple code snippet below to show polymorphism and how it can be used to share information and override certain information.  
 
 
-The Liskov Substitution Principle is very similar to these ideas as it is defined as if an object of type **raspberry** extends an object of type **fruit**, then an object of type **raspberry** can always be used whereever type **fruit** is expected.  Dynamically typed languages, like `ruby`, rely on this trust and expect these objects to respond appropriately to their messages.  
+{% highlight ruby %}
+class Fruit
+  def edible
+    true
+  end
+
+  def quantity
+    'one'
+  end
+end
+
+class Raspberry < Fruit
+  def color
+    "ruby red"
+  end
+
+  def quantity
+    "one pint"
+  end
+end
+{% endhighlight %}
+
+
+
+
+

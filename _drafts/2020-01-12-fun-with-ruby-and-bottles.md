@@ -27,7 +27,7 @@ I started my career in software development learning about [ruby](https://www.ru
  
 And the Liskov Substitution Principle states if let's say a type **Raspberry** extends type **Fruit**, then a **Raspberry** object type can always be used wherever a **Fruit** object type is expected.  Dynamically typed languages like `ruby`, rely on trust, expect these objects to respond appropriately to the message, and have presumptions about the message results.  
 
-So polymorphism is woven into each of these ideas in order to better organize and describe our code.  I created a simple code snippet below to show polymorphism and how it can be used to share information and override certain information.  
+So polymorphism is woven into each of these ideas in order to better organize and describe our code.  I created a simple code snippet below to show polymorphism and how it can be used to share information and override the parent class's data.  
 
 
 {% highlight ruby %}

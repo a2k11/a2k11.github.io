@@ -7,8 +7,8 @@ permalink: /:year/:month/:day/:title.html
 ---
 
 
-I started my career in software development learning about [ruby](https://www.ruby-lang.org/en/).  The language has a unique beauty & style when writing complex web applications or scripts that execute simple functions.  It wasn't hard to pick up [99 Bottles of OOP](https://www.sandimetz.com/99bottles) which has been on my list of **must reads** for a long time.  Here are a few of the many highlights I found interesting.
-
+I started my career in software development learning about [ruby](https://www.ruby-lang.org/en/).  The language has a unique beauty & style when writing complex web applications or scripts that execute simple functions.  On my list of **must reads** is [99 Bottles of OOP](https://www.sandimetz.com/99bottles).  I'll be sharing a little blurb about polymorphism.
+ 
 ---
 
 
@@ -25,33 +25,35 @@ I started my career in software development learning about [ruby](https://www.ru
     1. repeat steps a-c until all methods that switch on the value are dispersed
 2. Iterate until a subclass exists for every different value upon which you switch
  
-And the Liskov Substitution Principle states if let's say a type **Raspberry** extends type **Fruit**, then a **Raspberry** object type can always be used wherever a **Fruit** object type is expected.  Dynamically typed languages like `ruby`, rely on trust, expect these objects to respond appropriately to the message, and have presumptions about the message results.  
+And the Liskov Substitution Principle states if a type **B** uses an extension of type **A**, then a **B** object can be used and replace a **A** object.  Dynamically typed languages like `ruby`, rely on trust, expect these objects to respond appropriately to the message sent, and have presumptions about the message results.  
 
-So polymorphism is woven into each of these ideas in order to better organize and describe our code.  I created a simple code snippet below to show polymorphism and how it can be used to share information and override the parent class's data.  
+Polymorphism is used to better organize our code.  I created a simple code snippet below to show polymorphism and how it can be used to share information and override the parent class's data.  
 
 
 {% highlight ruby %}
-class Fruit
-  def edible
-    true
+class Robot
+  attr_reader :name
+  def initialize(name)
+    @name = name
   end
 
-  def quantity
-    'one'
-  end
-end
-
-class Raspberry < Fruit
-  def color
-    "ruby red"
+  def creator
+    if name == "Mega Man"
+      "Dr. Light"
+    else
+      "Dr. Wily"
+    end
   end
 
-  def quantity
-    "one pint"
+  def character
+    if name == "Mega Man"
+      "protagonist"
+    else
+      "antagonist"
+    end
   end
 end
 {% endhighlight %}
-
 
 
 

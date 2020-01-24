@@ -36,7 +36,7 @@ defaults:
     scope:
       path: ""
     values: 
-      layout: "post"
+      layout: "default"
 
 
 # Exclude from processing.

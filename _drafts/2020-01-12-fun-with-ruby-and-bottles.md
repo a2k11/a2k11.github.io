@@ -2,6 +2,9 @@
 layout: default
 title: Fun with ruby & bottles
 date: 2020-01-12
+month: 01
+day: 24
+year: 2020
 categories: ruby OOP polymorphism
 permalink: /:year/:month/:day/:title.html
 ---

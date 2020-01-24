@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Fun with ruby & bottles
 date: 2020-01-12
 categories: ruby OOP polymorphism

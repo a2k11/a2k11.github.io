@@ -18,17 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Adam Kaewell
+title: Adam Blogging
 email: adam.kaewell@gmail.com
-description: >-
-  Savour the little victories
+description: [Savouring each victory]
 baseurl: /blog
 url: https://adam.kaewell.com
 twitter_username: akaewell
 github_username:  a2k11
 
 # Build settings
-theme: minima
+theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
 

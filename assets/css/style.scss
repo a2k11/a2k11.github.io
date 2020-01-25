@@ -18,6 +18,7 @@
 
 #header nav {
   background: none;
+  max-width: 750px;
 }
 
 #title .credits-left {
@@ -28,11 +29,34 @@
   float: right;
 }
 
-#title .tags-right {
+#title .tags-left {
   float: left;
   font-style: italic;
 }
 
 .page-title {
   margin: 0;
+}
+
+#title .dashboard-title {
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+#title .dashboard-description {
+  margin: 0;
+  font-style: italic;
+}
+
+.dashboard-section {
+  margin-top: 35px;
+  max-width: 750px;
+}
+
+.wrapper {
+  max-width: 750px;
+}
+
+.default-section {
+  max-width: 750px;
 }

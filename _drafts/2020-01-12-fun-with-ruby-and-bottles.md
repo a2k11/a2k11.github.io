@@ -2,10 +2,10 @@
 layout: default
 title: Fun with ruby & bottles
 date: 2020-01-12
-month: 01
-day: 24
+month: January
+day: 26
 year: 2020
-categories: ruby OOP polymorphism
+categories: [ruby, OOP, polymorphism]
 permalink: /:year/:month/:day/:title.html
 ---
 
@@ -21,7 +21,8 @@ class MegaManOne
   def robot(name)
     character = Robot.new(name)
 
-    "The #{character.morality} #{character} was created by #{character.creator}.\n"
+    "The #{character.morality} #{character} was " \
+      "created by #{character.creator}.\n"
   end
 
   def game
@@ -90,7 +91,8 @@ class MegaManOne
   def robot(name)
     character = robot_for(name)
 
-    "The #{character.morality} #{character} was created by #{character.creator}.\n"
+    "The #{character.morality} #{character} was " \
+      "created by #{character.creator}.\n"
   end  
   
   def robot_for(name)

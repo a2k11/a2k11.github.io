@@ -12,5 +12,27 @@
 }
 
 .header-bar {
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#header nav {
+  background: none;
+}
+
+#title .credits-left {
+  float: left;
+}
+
+#title .credits-right {
+  float: right;
+}
+
+#title .tags-right {
+  float: left;
+  font-style: italic;
+}
+
+.page-title {
+  margin: 0;
 }

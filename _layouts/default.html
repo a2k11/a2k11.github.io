@@ -20,8 +20,22 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+          <div id="title">
+            <span class="credits-left">
+              <h3 class="header-title">{{ site.title }}</h3>
+              <h4 class="header-description">{{ site.description }}</h4>
+            </span>
+            <br />
+            <span class="credits-right">
+              <h5>
+                tweet <a href="{{ site.twitter.url }}">{{ site.twitter.username }}</a>
+                &nbsp;&nbsp;&sol;&nbsp;&nbsp;
+                github <a href="{{ site.github.url }}">{{ site.github.username }}</a>
+              </h5>
+            </span>
+          </div>
           {% if site.show_downloads %}
+            <li class="fork"><a href="{{ site.github.url }}">View On GitHub</a></li>
             <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
             <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
             <li class="title">DOWNLOADS</li>
@@ -33,19 +47,11 @@
 
       <section>
         <div id="title">
-            <h3 class="header-title">{{ site.title }}</h3>
-            <h4 class="header-description">{{ site.description }}</h4>
+          <span class="credits-left"><h2 class="page-title">{{ page.title }}</h2></span> 
+          <span class="credits-right"><h2 class="page-title">{{page.month}} {{page.day}}, {{page.year}}</h2></span>
+          <br />
           <hr class="header-bar">
-          <span class="credits right">
-            <h4>
-              tweet <a href="{{ site.twitter.url }}">{{ site.twitter.username }}</a>
-              &nbsp;&nbsp;&sol;&nbsp;&nbsp;
-              code <a href="{{ site.github.url }}">{{ site.github.username }}</a>
-            </h4>
-          </span>
-          <br /><br />
-          <span class="credits left"><h2>{{ page.title }}</h2></span> 
-          <span class="credits right"><h2>{{page.month}}-{{page.day}}-{{page.year}}</h2></span>
+          <span class="tags-left"><h5>&nbsp;&nbsp;&nbsp;&nbsp;categories: {{ page.categories[0]}},  {{page.categories[1]}}, {{page.categories[2]}}</h5></span> 
         </div>
 
         {{ content }}

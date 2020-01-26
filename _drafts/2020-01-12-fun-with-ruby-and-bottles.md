@@ -9,15 +9,24 @@ categories: [ruby, OOP, polymorphism]
 permalink: /:year/:month/:day/:title.html
 ---
 
-I started my career in software development learning about [ruby](https://www.ruby-lang.org/en/).  The language has a unique beauty & style when writing complex web applications or scripts that execute simple functions.  Dynamically typed languages like ruby rely on trust.  There are expectations for objects to respond appropriately to messages and presumptions about the message results.  On my list of **must reads** was [99 Bottles of OOP](https://www.sandimetz.com/99bottles), which I enjoyed during the 2019 holiday.  I'm sharing one of the many parts I found interesting ...
-<br/><br/>
-### **Using Polymorphism**
-<br/>
- Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  Barbara Liskov was one of the first women to earn a doctorate in computer science in 1968 at Standford.  In 1987, she gave a presentation called 'Data Abstraction & Hierarchy' which introduced behavioral subtyping.  It was described more precisely later as the Liskov Substitution Principle, which states if a type **B** uses an extension of type **A**, then a type **B** object can be used and replace a type **A** object.  In __99 Bottles of OOP__, there was a strategy titled "replace the conditional with polymorphism."  It outlined steps to remove unwanted conditionals using inheritance.  Here is a quick example...  
-<br/>
+I started my career in software development learning about [ruby](https://www.ruby-lang.org/en/).  The language has a unique beauty & style when writing complex web applications or scripts that execute simple functions.  Dynamically typed languages like ruby rely on trust.  There are expectations for objects to respond appropriately to messages and presumptions about the message results.  On my list of **must reads** was [99 Bottles of OOP](https://www.sandimetz.com/99bottles), which I enjoyed during the 2019 holiday.
+<br /><br />
+
+### **Liskov Substitution Principle**
+Barbara Liskov was one of the first women to earn a computer science doctorate in 1968 at Stanford.  She gave a keynote presentation called 'Data Abstraction & Hierarchy' which introduced behavioral subtyping.  It was described more precisely as the Liskov Substitution Principle.  It states: if for each object of type **A** there is an object of type **B** such that when object of type **B** is substituted and replaced by object of type **A**, and the program's behavior remains unchanged, we can say A is a subtype of B.  Barbara Liskov would receive the Turing Award in 2008 for her contributions related to data abstraction.
+<br /><br />
+
+### **Polymorphism**
+ Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  In __99 Bottles of OOP__, there is a strategy titled "replace the conditional with polymorphism."  It outlined steps to remove unwanted conditionals using inheritance.  Here is a quick example.  I'm using one of my favorite games, **Mega Man 2**, as the subject.  
+
+|Bubble Man|Air Man|Quick Man|Heat Man|Wood Man|Metal Man|Flash Man|Crash Man|
+|----------|-------|---------|--------|--------|---------|---------|---------|
+|![Bubble Man](/assets/megaman2/bubbleman.gif)|![Air Man](/assets/megaman2/airman.jpg)|![Quick Man](/assets/megaman2/quickman.png)|![Heat Man](/assets/megaman2/heatman.png)|![Wood Man](/assets/megaman2/woodman.png)|![Metal Man](/assets/megaman2/metalman.jpg)|![Flash Man](/assets/megaman2/flashman.png)|![Crash Man](/assets/megaman2/crashman.png)|
+
+<br />
 
 {% highlight ruby %}
-class MegaManOne
+class MegaMan2
   def robot(name)
     character = Robot.new(name)
 
@@ -26,8 +35,8 @@ class MegaManOne
   end
 
   def game
-    names = ["Mega Man", "Cut Man", "Ice Man", "Guts Man", "Bomb Man",
-      "Fire Man", "Elec Man"]
+    names = ["Mega Man", "Metal Man", "Flash Man", "Crash Man", "Heat Man",
+      "Wood Man", "Bubble Man", "Air Man", "Quick Man"]
     
     names.each do |name|
       robot(name)
@@ -87,7 +96,7 @@ Since we don't have a factory to create MegaManRobot objects, we can add one to 
 <br/>
 
 {% highlight ruby %}
-class MegaManOne
+class MegaMan2
   def robot(name)
     character = robot_for(name)
 

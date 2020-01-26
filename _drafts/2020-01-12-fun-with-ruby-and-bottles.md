@@ -17,7 +17,7 @@ Barbara Liskov was one of the first women to earn a computer science doctorate i
 <br /><br />
 
 ### **Polymorphism**
- Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  In __99 Bottles of OOP__, there is a strategy titled "replace the conditional with polymorphism."  It outlined steps to remove unwanted conditionals using inheritance.  Here is a quick example.  I'm using one of my favorite games, **Mega Man 2**, as the subject.  
+ Polymorphism is defined as the concept of 2 or more classes having the ability to respond to the same directive.  In __99 Bottles of OOP__, there is a strategy titled "replace the conditional with polymorphism."  It outlined steps to remove unwanted conditionals using inheritance.  Here is a quick example.  **Mega Man 2** is the subject.
 
 |Bubble Man|Air Man|Quick Man|Heat Man|Wood Man|Metal Man|Flash Man|Crash Man|
 |----------|-------|---------|--------|--------|---------|---------|---------|

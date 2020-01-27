@@ -20,27 +20,38 @@
   <body>
     <div class="wrapper">
       <section class="dashboard-section">
-        <div id="title" class="page-title">
+        <div class="dashboard-header">
           <h1 class="dashboard-title"><em>{{ site.title }}</em></h1>
           <h3 class="dashboard-description">{{ site.description }}</h3>
-          <hr>
+          <hr class="dashboard-bar">
         </div>
-        <h3 class="dashboard-description">Blog Posts</h3>
-        <ul>
-          {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <div class="container">
-          <figure>
+        <div class="dashboard-container">
+          <h1 class="dashboard-container-header"><em>Welcome everyone</em></h1>
+          <figure class="dashboard-container-picture">
             <img src="/assets/mm-green.jpg" style="max-width: 150px;"
-              alt="Adam" />
+            alt="Adam" />
           </figure>
-          <span>
+          <span class="dashboard-container-content">
             {{ content }}
           </span>
+          <span class="dashboard-container-posts">
+            <h3 class="dashboard-blog-title">Blog Posts</h3>
+            <ul>
+              {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.month }} {{ post.day }}, {{ post.year }} -- {{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </span>
+          <hr class="dashboard-container-bar">
+          <h4 class="dashboard-container-footer">
+            tweet <a href="{{ site.twitter.url }}">{{ site.twitter.username }}</a>
+            &nbsp;&nbsp;&sol;&nbsp;&nbsp;
+            github <a href="{{ site.github.url }}">{{ site.github.username }}</a>
+            &nbsp;&nbsp;&sol;&nbsp;&nbsp;
+            <a href="mailto:{{ site.email }}">{{ site.email_short }}</a>
+          </h4>
         </div>
       </section>
     </div>

@@ -3,17 +3,10 @@
 
 @import "{{ site.theme }}";
 
-.header-title {
-  margin-bottom: 0;
-}
+// ----- GLOABAL -----
 
-.header-description {
-  font-style: italic;
-}
-
-.header-bar {
-  margin-top: 10px;
-  margin-bottom: 5px;
+.wrapper {
+  max-width: 750px;
 }
 
 #header nav {
@@ -21,53 +14,124 @@
   max-width: 750px;
 }
 
-#title .credits-left {
+// ----- POST PAGE -----
+
+.site-title {
+  margin-bottom: 0;
+}
+
+.site-description {
+  font-style: italic;
+}
+
+.post-credits-left {
   float: left;
 }
 
-#title .credits-right {
+.post-credits-right {
   float: right;
 }
 
-#title .tags-left {
+.post-bar {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.post-title {
+  float: left;
+  margin: 0;
+}
+
+.post-date {
+  float: right;
+  margin: 0;
+}
+
+.post-categories {
   float: left;
   font-style: italic;
 }
 
-.page-title {
-  margin: 0;
+.post-header {
+  max-width: 750px;
 }
 
-#title .dashboard-title {
-  margin: 0 0 5px 0;
-  text-align: left;
-  color: #ffcc00;
+img[alt=MegaMan], img[alt=BubbleMan], img[alt=AirMan],
+img[alt=QuickMan], img[alt=HeatMan], img[alt=WoodMan],
+img[alt=MetalMan], img[alt=FlashMan], img[alt=CrashMan] { 
+  max-width: 70px; 
 }
 
-#title .dashboard-description {
-  margin: 0 0 10 0;
-  font-style: italic;
-}
+// ----- DASHBOARD PAGE -----
 
 .dashboard-section {
   margin-top: 10px;
   max-width: 750px;
 }
 
-.dashboard-section #title {
+.dashboard-header {
   margin: 0;
+
+  .dashboard-bar {
+    margin: 0 0 40px 0;
+  }
 }
 
-.wrapper {
-  max-width: 750px;
+.dashboard-title {
+  margin: 0 0 5px 0;
+  text-align: left;
+  color: #229954;
 }
 
-.default-section {
-  max-width: 750px;
+.dashboard-description {
+  margin: 0 0 10px 0;
+  font-style: italic;
 }
 
-.container {
+.dashboard-container {
   display: grid;
   grid-template-columns: 200px 550px;
   grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "picture content"
+    "posts posts"
+    "buffer buffer"
+    "footer footer";
+}
+
+.dashboard-container-header {
+  color: #229954;
+  grid-area: header;
+  padding-bottom: 20px;
+  justify-self: center;
+  text-decoration: underline;
+}
+
+.dashboard-container-picture {
+  grid-area: picture;
+}
+
+.dashboard-container-content {
+  grid-area: content;
+}
+
+.dashboard-container-footer {
+  grid-area: footer;
+  justify-self: right;
+}
+
+.dashboard-container-posts {
+  padding: 30px 0 0 0;
+  grid-area: posts;
+  justify-self: center;
+}
+
+.dashboard-blog-title {
+  color: #229954;
+}
+
+.dashboard-container-bar {
+  grid-area: buffer;
+  margin: 40px 0 5px 0;
 }

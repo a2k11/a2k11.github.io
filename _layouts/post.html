@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+    <div id="header">
+      <nav>
+        <div>
+          <span class="post-credits-left">
+            <h3 class="site-title"><a href="/">{{ site.title }}</a></h3>
+            <h4 class="site-description">{{ site.description }}</h4>
+          </span>
+          <br />
+          <span class="post-credits-right">
+            <h5>
+              tweet <a href="{{ site.twitter.url }}">{{ site.twitter.username }}</a>
+              &nbsp;&nbsp;&sol;&nbsp;&nbsp;
+              github <a href="{{ site.github.url }}">{{ site.github.username }}</a>
+              &nbsp;&nbsp;&sol;&nbsp;&nbsp;
+              <a href="mailto:{{ site.email }}">{{ site.email_short }}</a>
+            </h5>
+          </span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <section class="post-header">
+        <div id="title">
+          <h2 class="post-title">{{ page.title }}</h2>
+          <h2 class="post-date">{{page.month}} {{page.day}}, {{page.year}}</h2>
+          <br />
+          <hr class="post-bar">
+          <span class="post-categories"><h5>&nbsp;&nbsp;&nbsp;&nbsp;categories: {{ page.categories[0]}},  {{page.categories[1]}}, {{page.categories[2]}}</h5></span> 
+        </div>
+        {{ content }}
+      </section>
+    </div>
+  </body>
+</html>
